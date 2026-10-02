@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Club d'Échecs FIC — 2026–2027</title>
+<style>
+:root{
+  --bg:#060b14;--surface:#0d1524;--surface2:#121d30;--surface3:#18263d;
+  --gold:#d9ad4d;--gold2:#f3d88b;--text:#f5f7fb;--muted:#9eacbf;
+  --line:#263650;--green:#59d48a;--shadow:0 18px 45px rgba(0,0,0,.25)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(circle at 10% 0%,#1a2a46 0,transparent 28%),
+ radial-gradient(circle at 90% 15%,#211a0b 0,transparent 22%),
+ var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(6,11,20,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.1px}
+.logo{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#f0cc69,#a87521);color:#08101b;font-size:26px;box-shadow:0 8px 22px #0005}
+.brand small{display:block;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+nav{display:flex;gap:4px;overflow:auto}nav a{padding:9px 12px;color:var(--muted);font-size:13px;border-radius:9px;white-space:nowrap}nav a:hover{background:var(--surface2);color:#fff}
+
+.hero{padding:78px 0 42px}.heroGrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:30px;align-items:center}
+.eyebrow{color:var(--gold2);font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-.045em;margin:13px 0 20px}
+.hero p{max-width:720px;color:var(--muted);font-size:17px;line-height:1.75}
+.notice{margin-top:24px;border:1px solid #59451d;background:linear-gradient(135deg,#17170f,#121b2a);padding:14px 16px;border-radius:12px;color:#dfe6ef;line-height:1.55}
+.heroCard{border:1px solid #3b4a61;border-radius:26px;padding:30px;text-align:center;background:linear-gradient(145deg,#162640,#0c1422);box-shadow:var(--shadow)}
+.king{font-size:92px;filter:drop-shadow(0 12px 20px #0007)}.heroCard h3{color:var(--gold2);margin:8px 0}.heroCard p{font-size:13px;margin:0}
+
+section{padding:42px 0}.title{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}.title h2{margin:0;font-size:29px;letter-spacing:-.02em}.title p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{position:relative;overflow:hidden;background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 25px #0002}.stat:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;right:-35px;top:-35px;background:#d9ad4d0d}.num{font-size:34px;font-weight:900;color:var(--gold2);line-height:1}.muted{color:var(--muted)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:linear-gradient(145deg,rgba(18,29,48,.96),rgba(10,18,31,.96));border:1px solid var(--line);border-radius:20px;padding:21px;box-shadow:0 8px 30px #0002}.panel h3{margin-top:0}
+table{width:100%;border-collapse:separate;border-spacing:0}th,td{padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.075);text-align:left;font-size:13px}th{color:var(--gold2);font-size:10px;text-transform:uppercase;letter-spacing:.1em}tbody tr:hover td{background:#ffffff04}tbody tr:last-child td{border-bottom:0}
+
+.schedule{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.month{background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:16px;padding:16px;min-height:125px}.month h3{margin:0 0 8px;color:var(--gold2);font-size:14px}.month p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+
+.trophies{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.trophy{position:relative;overflow:hidden;background:linear-gradient(150deg,#17263e,#0c1524);border:1px solid var(--line);border-radius:19px;padding:22px 17px;text-align:center;min-height:180px;transition:.2s}.trophy:hover{transform:translateY(-3px);border-color:#765d2c}.trophy:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,#d9ad4d14,transparent 55%);pointer-events:none}.trophy .icon{font-size:52px}.trophy h3{margin:9px 0 5px}.trophy p{color:var(--muted);font-size:12px;line-height:1.5;margin:0}
+
+input{width:100%;padding:13px 14px;background:#08111f;border:1px solid var(--line);border-radius:11px;color:#fff;margin-bottom:12px;outline:none}input:focus{border-color:#82652c;box-shadow:0 0 0 3px #d9ad4d12}
+.badge{display:inline-flex;padding:4px 8px;border-radius:999px;background:#1a2b46;color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.03em}
+.notice + *{margin-top:0}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:12px;margin-top:25px}
+
+
+.heroTop{display:flex;justify-content:space-between;align-items:flex-start;gap:25px}
+.seasonBadge{border:1px solid #6f592c;background:#121a28;border-radius:16px;padding:12px 17px;text-align:center;color:var(--gold2);font-size:10px;letter-spacing:.13em;line-height:1.5;box-shadow:0 8px 25px #0003}
+.seasonBadge strong{font-size:16px;letter-spacing:.03em}
+.matchHero{margin-top:30px;border:1px solid #35445c;border-radius:24px;background:linear-gradient(105deg,#111d31,#0b1422);padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.matchHero:after{content:"♟";position:absolute;right:3%;top:-35px;font-size:180px;color:#ffffff05;transform:rotate(-10deg)}
+.matchLabel{text-align:center;color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:.18em;margin-bottom:17px}
+.matchGrid{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:10px;max-width:800px;margin:auto}
+.division{display:flex;align-items:center;gap:12px;background:#17253a;border:1px solid #2c3d57;border-radius:16px;padding:15px 17px}
+.division span{font-size:30px}.division b{display:block}.division small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.vs{text-align:center;font-weight:900;color:var(--gold2);font-size:14px}
+.matchFoot{text-align:center;color:var(--muted);font-size:11px;margin-top:15px}
+.dashboard{padding-top:8px}.dashGrid{display:grid;grid-template-columns:1.1fr 1.1fr .9fr;gap:15px}
+.dashCard{background:linear-gradient(145deg,#111e32,#0b1422);border:1px solid var(--line);border-radius:19px;padding:19px;box-shadow:0 9px 28px #0002}
+.dashCard.featured{border-color:#5d4b28}.dashHead{display:flex;align-items:center;gap:11px}.dashHead>span{font-size:27px}.dashHead b{display:block}.dashHead small{color:var(--muted);font-size:10px}.dashBig{font-size:34px;font-weight:900;color:var(--gold2);margin:18px 0 7px}.dashBig small{font-size:12px;font-weight:600;color:var(--muted)}
+.progress{height:5px;background:#26354c;border-radius:10px;overflow:hidden}.progress i{display:block;height:100%;width:0;background:var(--gold);border-radius:10px}.dashCard p{font-size:12px;color:var(--muted);line-height:1.55;min-height:38px}.dashCard a{font-size:12px;color:var(--gold2);font-weight:800}
+
+.profileTools{display:flex;gap:10px;align-items:center;margin-bottom:16px}.profileTools input{margin:0;flex:1}
+.profileFilters{display:flex;gap:6px}.pfilter{border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:10px 12px;border-radius:10px;cursor:pointer}.pfilter.active,.pfilter:hover{color:var(--gold2);border-color:#6b5528}
+.profilesGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.profile{background:linear-gradient(150deg,#15243b,#0b1423);border:1px solid var(--line);border-radius:18px;padding:17px;cursor:pointer;transition:.18s;position:relative;overflow:hidden}
+.profile:hover{transform:translateY(-3px);border-color:#66552f}.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#263a58,#17263d);border:1px solid #3a4d68;font-size:25px;margin-bottom:12px}
+.profile .classTag{position:absolute;top:14px;right:14px}.profile h3{font-size:14px;margin:0 0 4px;line-height:1.3}.profile small{color:var(--muted);font-size:11px}.profileStats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:14px}.profileStats div{background:#ffffff05;border-radius:8px;padding:8px 4px;text-align:center}.profileStats b{display:block;color:var(--gold2);font-size:13px}.profileStats span{display:block;color:var(--muted);font-size:8px;margin-top:2px}
+.modal{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;z-index:50;padding:20px}.modal.open{display:flex}.modalBox{width:min(520px,100%);background:linear-gradient(145deg,#17263d,#0b1423);border:1px solid #41516a;border-radius:22px;padding:24px;box-shadow:0 25px 80px #0009}.modalTop{display:flex;justify-content:space-between;gap:15px}.close{border:0;background:#ffffff0c;color:white;width:34px;height:34px;border-radius:9px;cursor:pointer;font-size:20px}.modalAvatar{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:#203552;font-size:35px;margin-bottom:12px}.statRow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}.statBox{background:#ffffff06;border:1px solid #ffffff08;border-radius:10px;padding:12px;text-align:center}.statBox b{display:block;color:var(--gold2);font-size:18px}.statBox span{color:var(--muted);font-size:9px}
+@media(max-width:950px){.profilesGrid{grid-template-columns:repeat(3,1fr)}.dashGrid{grid-template-columns:1fr 1fr}.dashCard:last-child{grid-column:1/-1}.matchGrid{grid-template-columns:1fr 60px 1fr}.schedule{grid-template-columns:repeat(3,1fr)}.trophies{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.profileTools{display:block}.profileFilters{margin-top:8px}.profilesGrid{grid-template-columns:repeat(2,1fr)}.heroTop{display:block}.seasonBadge{display:inline-block;margin-top:18px}.dashGrid{grid-template-columns:1fr}.dashCard:last-child{grid-column:auto}.matchGrid{grid-template-columns:1fr}.vs{padding:3px}.heroGrid,.two{grid-template-columns:1fr}.heroCard{max-width:430px;margin:auto}.stats{grid-template-columns:repeat(2,1fr)}.schedule{grid-template-columns:repeat(2,1fr)}nav{max-width:50vw}}
+@media(max-width:520px){.profilesGrid{grid-template-columns:1fr 1fr}.profile{padding:14px}.profileTools input{margin-bottom:8px}.statRow{grid-template-columns:repeat(2,1fr)}.hero{padding-top:52px}.heroCard{display:none}.stats{grid-template-columns:1fr 1fr}.trophies,.schedule{grid-template-columns:1fr}.title{display:block}.panel{padding:15px}th,td{padding:9px 7px;font-size:12px}}
+</style>
+
+<style>
+.result-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px}
+.panel label{display:block;margin:14px 0;font-weight:600}
+.panel select,.panel input{display:block;width:100%;margin-top:7px;padding:11px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#111;color:inherit}
+.panel .btn{margin:8px 5px 0 0}
+.results-list{display:flex;flex-direction:column;gap:8px}
+.result-row{display:grid;grid-template-columns:auto auto 1fr auto 1fr auto;gap:10px;align-items:center;padding:11px;border-radius:10px;background:rgba(255,255,255,.035)}
+.badge{font-size:.75rem;padding:4px 7px;border-radius:999px;background:rgba(255,255,255,.1)}
+.delete-result{border:0;background:transparent;color:#aaa;font-size:20px;cursor:pointer}
+@media(max-width:800px){.result-grid{grid-template-columns:1fr}.result-row{grid-template-columns:auto auto 1fr auto}}
+</style>
+
+
+<style>
+/* V7 — championnat dashboard */
+.chess-dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}
+.chess-stat{padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.045)}
+.chess-stat strong{display:block;font-size:1.65rem;margin-top:4px}
+.chess-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.chess-tabs button{cursor:pointer;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:inherit;border-radius:999px;padding:9px 14px}
+.chess-tabs button.active{background:rgba(255,255,255,.14)}
+.chess-table-wrap{overflow-x:auto}
+.chess-live-table{width:100%;border-collapse:collapse}
+.chess-live-table th,.chess-live-table td{padding:10px 9px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+.chess-live-table th{font-size:.78rem;text-transform:uppercase;opacity:.7}
+.chess-live-table tr:first-child td:first-child{font-weight:800}
+.player-detail{display:none;margin-top:18px;padding:20px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.04)}
+.player-detail.open{display:block}
+.match-list{display:grid;gap:8px}
+.match-item{display:grid;grid-template-columns:70px 1fr auto 1fr;gap:10px;align-items:center;padding:10px;border-radius:10px;background:rgba(255,255,255,.035)}
+@media(max-width:850px){.chess-dashboard{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.chess-dashboard{grid-template-columns:1fr}.match-item{grid-template-columns:50px 1fr auto}}
+</style>
+
+
+<style>
+.detail-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.detail-close{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:inherit;font-size:26px;line-height:1;cursor:pointer}
+.detail-close:hover{background:rgba(255,255,255,.14)}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<div class="brand"><span class="logo">♟</span><span>Club d'Échecs FIC<small>Saison 2026–2027</small></span></div>
+<nav><a href="#classements">Classements</a><a href="#calendrier">Calendrier</a><a href="#joueurs">Joueurs</a><a href="#profils">Profils</a><a href="#trophees">Trophées</a><a href="#regles">Règles</a><a href="#resultats">Résultats</a>
+</nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<div class="heroTop"><div>
+<div class="eyebrow">FIC • 2026–2027</div><h1>La saison du<br>Club d'Échecs.</h1>
+<p>Le portail officiel de la saison : joueurs, divisions, championnat, calendrier, trophées et résultats.</p>
+<div class="notice">📌 <b>Calendrier :</b> les journées seront placées en fonction du calendrier scolaire FIC.</div>
+</div><div class="seasonBadge">SAISON<br><strong>2026—2027</strong></div></div>
+<div class="matchHero">
+<div class="matchLabel">PROCHAINE JOURNÉE</div>
+<div class="matchGrid">
+<div class="division"><span>👑</span><div><b>Groupe Roi</b><small>Championnat Roi</small></div></div>
+<div class="vs">VS</div>
+<div class="division"><span>♟️</span><div><b>Groupe Pion</b><small>Championnat Pion</small></div></div>
+</div>
+<div class="matchFoot">📅 Date à confirmer selon le calendrier scolaire FIC</div>
+</div></div></section>
+
+<section><div class="container stats">
+<div class="stat"><div class="num">31</div><div class="muted">joueurs inscrits</div></div>
+<div class="stat"><div class="num">10</div><div class="muted">Groupe Roi</div></div>
+<div class="stat"><div class="num">21</div><div class="muted">Groupe Pion</div></div>
+<div class="stat"><div class="num">3</div><div class="muted">trophées prioritaires</div></div>
+</div></section>
+<section class="dashboard"><div class="container"><div class="dashGrid">
+<div class="dashCard featured"><div class="dashHead"><span>👑</span><div><b>Groupe Roi</b></div></div><div class="dashBig">10 <small>joueurs</small></div><div class="progress"><i></i></div><a href="#classements">Voir le classement →</a></div>
+<div class="dashCard"><div class="dashHead"><span>♟️</span><div><b>Groupe Pion</b></div></div><div class="dashBig">21 <small>joueurs</small></div><div class="progress"><i></i></div><a href="#classements">Voir le classement →</a></div>
+</div></div></section>
+<section id="classements"><div class="container"><div class="title"><h2>📊 Classements</h2><p>Les points seront ajoutés après chaque partie.</p></div>
+<div class="two"><div class="panel"><h3>👑 Groupe Roi</h3><table><thead><tr><th>#</th><th>Joueur</th><th>MJ</th><th>Pts</th></tr></thead><tbody id="roiRank"></tbody></table></div>
+<div class="panel"><h3>🟡 Groupe Pion</h3><table><thead><tr><th>#</th><th>Joueur</th><th>MJ</th><th>Pts</th></tr></thead><tbody id="pionRank"></tbody></table></div></div></div></section>
+
+<section id="calendrier"><div class="container"><div class="title"><h2>📅 Calendrier</h2><p>Organisation générale provisoire, adaptée au calendrier FIC.</p></div><div class="schedule" id="schedule"></div>
+<div class="panel" style="margin-top:14px"><b>Groupe Roi :</b> 9 journées prévues, 5 parties par journée.<br><b>Groupe Pion :</b> 7 journées prévues, 10 parties + 1 exempt par journée.</div></div></section>
+
+<section id="joueurs"><div class="container"><div class="title"><h2>♟️ Joueurs</h2><p>Effectif officiel actuel : 31 joueurs.</p></div><input id="search" placeholder="🔎  Rechercher un joueur…">
+<div class="panel"><table><thead><tr><th>#</th><th>Joueur</th><th>Classe</th></tr></thead><tbody id="players"></tbody></table></div></div></section>
+
+
+<section id="profils"><div class="container">
+<div class="title"><h2>🪪 Profils des joueurs</h2><p>Chaque joueur pourra suivre son parcours pendant la saison.</p></div>
+<div class="profileTools">
+<input id="profileSearch" placeholder="🔎  Rechercher un joueur…">
+<div class="profileFilters">
+<button class="pfilter active" data-pfilter="all">Tous</button>
+<button class="pfilter" data-pfilter="roi">👑 Roi</button>
+<button class="pfilter" data-pfilter="pion">♟️ Pion</button>
+</div>
+</div>
+<div class="profilesGrid" id="profilesGrid"></div>
+</div></section>
+
+<section id="trophees"><div class="container"><div class="title"><h2>🏆 Trophées</h2><p>Collection prévue pour le club.</p></div><div class="notice" style="margin-bottom:16px">🏆 <b>Les quatre récompenses officielles :</b> Roi d’Or, Coupe du Club, Champion du Groupe Roi et Champion du Groupe Pion.</div><div class="trophies">
+<div class="trophy"><div class="icon">👑</div><h3>Roi d'Or</h3><p>Meilleur joueur de tout le club.</p></div>
+<div class="trophy"><div class="icon">🏆</div><h3>Coupe du Club</h3><p>Vainqueur de la Coupe.</p></div>
+<div class="trophy"><div class="icon">♔</div><h3>Champion du Groupe Roi</h3><p>Premier du Championnat Roi.</p></div>
+<div class="trophy"><div class="icon">♙</div><h3>Champion du Groupe Pion</h3><p>Premier du Championnat Pion.</p></div>
+</div><div class="panel" style="margin-top:14px"><h3>👑 Roi d'Or</h3><p class="muted">Le trophée appartient au club. Le lauréat le conserve pendant son année de règne puis le restitue pour le gagnant suivant. Les gagnants peuvent être conservés dans un registre historique.</p></div></div></section>
+
+<section id="regles"><div class="container"><div class="title"><h2>📚 Règles</h2><p>Propositions actuelles.</p></div><div class="two">
+<div class="panel"><h3>Barème proposé</h3><table><tr><td>Victoire</td><td>3 pts</td><td>1–0</td></tr><tr><td>Nulle</td><td>1 pt</td><td>½–½</td></tr><tr><td>Défaite</td><td>0 pt</td><td>0–1</td></tr></table><p class="muted">À valider officiellement.</p></div>
+<div class="panel"><h3>Statistiques</h3><ul class="muted"><li>Matchs joués</li><li>Victoires / nulles / défaites</li><li>Points</li><li>Séries</li><li>Résultats Blancs / Noirs</li></ul></div>
+</div></div></section>
+
+<footer><div class="container">♟️ Club d'Échecs FIC · Saison 2026–2027 · Site de travail · Mise à jour : septembre 2026</div></footer>
+
+<script>
+const roi=["Sylvain Bryhann","Pierre Hatley","Millery Fabrice","Nazaire Kerry Fabian","Revil Ryan","Turenne Wade","Dolne Marckley Paolo","Dume Anel","Avril Garvens","Noël Kévin Rod Andy"];
+const pion=["Hans Ryan Estira","Menard Rodensley","Samon Arthur","Clervil Olivier","Guirand Mike Aderson","Émile Jr Bernado","Moncy Hubert Marvin","Lenny Jean Rolf","Noël Jeune Remy Noah","Jeff","Victor Fayden","Séjour Jethro Widmysan","Sinous Gordon Himckley","Nelson Davindry","Montesuma","Dubic Jean Braudry Baudelaire","Lundy Christian","Paul Werley","Prince Coutin","Sinsmis Mc Donald","Emmanuel Carlens"];
+const months=[["Septembre","Présentation, inscriptions, évaluation et constitution des classes."],["Octobre","Début du championnat et premières journées."],["Novembre","Journées régulières et statistiques."],["Décembre","Bilan de mi-saison puis pause des vacances."],["Janvier","Reprise du championnat."],["Février","Championnat et lancement possible de la Coupe."],["Mars","Championnat et Coupe."],["Avril","Course au titre et rattrapages."],["Mai","Dernières journées et préparation de la cérémonie."],["Juin","Cérémonie, trophées et bilan."]];
+schedule.innerHTML=months.map(m=>`<div class="month"><h3>${m[0]}</h3><p>${m[1]}</p></div>`).join("");
+function rank(id,a){document.getElementById(id).innerHTML=a.map((n,i)=>`<tr><td>${i+1}</td><td>${n}</td><td>—</td><td>—</td></tr>`).join("")}
+rank("roiRank",roi);rank("pionRank",pion);
+function players(){let q=search.value.toLowerCase();let all=roi.map((n,i)=>({n,c:"Roi",i:i+1})).concat(pion.map((n,i)=>({n,c:"Pion",i:i+1})));all=all.filter(x=>x.n.toLowerCase().includes(q));document.getElementById("players").innerHTML=all.map(x=>`<tr><td>${x.i}</td><td>${x.n}</td><td><span class="badge">${x.c}</span></td></tr>`).join("")}search.oninput=players;players();
+
+const profileSearch=document.getElementById("profileSearch");
+const profilesGrid=document.getElementById("profilesGrid");
+let profileFilter="all";
+const playerData=[...roi.map((name,i)=>({name,classe:"Roi",number:i+1})),...pion.map((name,i)=>({name,classe:"Pion",number:i+1}))];
+
+function initials(name){return name.split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join("").toUpperCase()}
+function renderProfiles(){
+  const q=(profileSearch.value||"").toLowerCase();
+  const list=playerData.filter(p=>(profileFilter==="all"||p.classe.toLowerCase()===profileFilter)&&p.name.toLowerCase().includes(q));
+  profilesGrid.innerHTML=list.map((p,i)=>`
+  <article class="profile" data-player="${p.number}-${p.classe}">
+    <span class="badge classTag">${p.classe==="Roi"?"👑 Roi":"♟️ Pion"}</span>
+    <div class="avatar">${initials(p.name)}</div>
+    <h3>${p.name}</h3><small>${p.classe==="Roi"?"Groupe Roi":"Groupe Pion"} • Joueur ${p.number}</small>
+    <div class="profileStats"><div><b>—</b><span>MJ</span></div><div><b>—</b><span>V</span></div><div><b>—</b><span>PTS</span></div></div>
+  </article>`).join("");
+  document.querySelectorAll(".profile").forEach(card=>card.onclick=()=>{
+    const [n,c]=card.dataset.player.split("-");
+    const p=playerData.find(x=>x.number===Number(n)&&x.classe===c);
+    if(!p)return;
+    document.getElementById("modalAvatar").textContent=initials(p.name);
+    document.getElementById("modalName").textContent=p.name;
+    document.getElementById("modalClass").textContent=(p.classe==="Roi"?"👑 Groupe Roi":"♟️ Groupe Pion")+" • Profil de saison";
+    document.getElementById("playerModal").classList.add("open");
+  });
+}
+profileSearch.addEventListener("input",renderProfiles);
+document.querySelectorAll(".pfilter").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll(".pfilter").forEach(x=>x.classList.remove("active"));
+ b.classList.add("active");profileFilter=b.dataset.pfilter;renderProfiles();
+}));
+document.getElementById("closeModal").onclick=()=>document.getElementById("playerModal").classList.remove("open");
+document.getElementById("playerModal").addEventListener("click",e=>{if(e.target.id==="playerModal")e.currentTarget.classList.remove("open")});
+renderProfiles();
+</script>
+
+<div class="modal" id="playerModal" aria-hidden="true">
+ <div class="modalBox">
+  <div class="modalTop">
+   <div><div class="modalAvatar" id="modalAvatar">♟</div><h2 id="modalName" style="margin:0"></h2><p id="modalClass" class="muted"></p></div>
+   <button class="close" id="closeModal">×</button>
+  </div>
+  <div class="statRow">
+   <div class="statBox"><b>—</b><span>PARTIES</span></div>
+   <div class="statBox"><b>—</b><span>VICTOIRES</span></div>
+   <div class="statBox"><b>—</b><span>POINTS</span></div>
+   <div class="statBox"><b>—</b><span>CLASSEMENT</span></div>
+  </div>
+  <p class="muted" style="margin-top:18px;line-height:1.6">Les statistiques seront renseignées au fur et à mesure des journées. Cette fiche est la future carte d'identité sportive du joueur.</p>
+ </div>
+</div>
+
+
+<section id="roi-dor-live" class="section">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">RÉCOMPENSE INDIVIDUELLE</span>
+      <h2>👑 Roi d’Or</h2>
+      <p class="muted">Le Roi d’Or récompense le meilleur joueur d’échecs du club, sans distinction entre Groupe Roi et Groupe Pion.</p>
+    </div>
+  </div>
+  <div class="two" style="margin-bottom:16px">
+    <div class="panel"><h3>⚖️ Critères officiels proposés</h3><table><tr><td>Performance dans son championnat</td><td><b>40 %</b></td></tr><tr><td>Performance contre les meilleurs joueurs</td><td><b>20 %</b></td></tr><tr><td>Performance en Coupe du Club</td><td><b>20 %</b></td></tr><tr><td>Régularité sur la saison</td><td><b>10 %</b></td></tr><tr><td>Qualité de jeu et fair-play</td><td><b>10 %</b></td></tr></table><p class="muted">Ces pondérations permettent de comparer les joueurs des deux championnats sur l'ensemble de la saison. Elles restent à valider par le comité et la Direction.</p></div>
+    <div class="panel"><h3>👑 Principe</h3><p class="muted">Le Roi d’Or n’est pas automatiquement attribué au champion du Groupe Roi ou du Groupe Pion. Il récompense le meilleur bilan individuel global de la saison, quel que soit le championnat du joueur.</p></div>
+  </div>
+  <div class="panel">
+    <div class="chess-table-wrap">
+      <table class="chess-live-table">
+        <thead><tr><th>#</th><th>Joueur</th><th>Groupe</th><th>Pts</th><th>J</th><th>V</th><th>N</th><th>D</th></tr></thead>
+        <tbody id="roiDorStandings"><tr><td>1</td><td><strong>Sylvain Bryhann</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2</td><td><strong>Pierre Hatley</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>3</td><td><strong>Millery Fabrice</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>4</td><td><strong>Nazaire Kerry Fabian</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>5</td><td><strong>Revil Ryan</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>6</td><td><strong>Turenne Wade</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>7</td><td><strong>Dolne Marckley Paolo</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>8</td><td><strong>Dume Anel</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>9</td><td><strong>Avril Garvens</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>10</td><td><strong>Noël Kévin Rod Andy</strong></td><td>Roi</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>11</td><td><strong>Hans Ryan Estira</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>12</td><td><strong>Menard Rodensley</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>13</td><td><strong>Samon Arthur</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>14</td><td><strong>Clervil Olivier</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>15</td><td><strong>Guirand Mike Aderson</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>16</td><td><strong>Émile Jr Bernado</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>17</td><td><strong>Moncy Hubert Marvin</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>18</td><td><strong>Lenny Jean Rolf</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>19</td><td><strong>Noël Jeune Remy Noah</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>20</td><td><strong>Jeff</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>21</td><td><strong>Victor Fayden</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>22</td><td><strong>Séjour Jethro Widmysan</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>23</td><td><strong>Sinous Gordon Himckley</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>24</td><td><strong>Nelson Davindry</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>25</td><td><strong>Montesuma</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>26</td><td><strong>Dubic Jean Braudry Baudelaire</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>27</td><td><strong>Lundy Christian</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>28</td><td><strong>Paul Werley</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>29</td><td><strong>Prince Coutin</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>30</td><td><strong>Sinsmis Mc Donald</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>31</td><td><strong>Emmanuel Carlens</strong></td><td>Pion</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="championnat-live" class="section">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">LIVE CHAMPIONNAT</span>
+      <h2>Tableau de bord</h2>
+      <p class="muted">Classements, matchs et statistiques calculés à partir des résultats enregistrés.</p>
+    </div>
+  </div>
+
+  <div class="chess-tabs" id="divisionTabs">
+    <button class="active" data-division="Roi">👑 Groupe Roi</button>
+    <button data-division="Pion">🟡 Groupe Pion</button>
+  </div>
+
+  <div class="chess-dashboard">
+    <div class="chess-stat"><span>Joueurs</span><strong id="livePlayers">—</strong></div>
+    <div class="chess-stat"><span>Parties jouées</span><strong id="liveGames">0</strong></div>
+    <div class="chess-stat"><span>Rounds enregistrés</span><strong id="liveRounds">0</strong></div>
+    <div class="chess-stat"><span>Leader</span><strong id="liveLeader">—</strong></div>
+  </div>
+
+  <div class="panel">
+    <h3>Classement en direct</h3>
+    <div class="chess-table-wrap">
+      <table class="chess-live-table">
+        <thead><tr><th>#</th><th>Joueur</th><th>Pts</th><th>J</th><th>V</th><th>N</th><th>D</th></tr></thead>
+        <tbody id="liveStandings"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:18px">
+    <h3>Matchs enregistrés</h3>
+    <div id="liveMatches" class="match-list"></div>
+  </div>
+
+  <div id="playerDetail" class="player-detail">
+    <div class="detail-head"><h3 id="detailName">Profil</h3><button type="button" id="closePlayerDetail" class="detail-close" aria-label="Fermer la fiche">×</button></div>
+    <p id="detailStats" class="muted"></p>
+    <div id="detailMatches" class="match-list"></div>
+  </div>
+</section>
+
+<section id="resultats" class="section">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">ADMINISTRATION</span>
+      <h2>Entrer un résultat</h2>
+      <p class="muted">Enregistre une partie terminée : le classement et les statistiques sont recalculés automatiquement.</p><p id="liveDataNote" class="muted">Les profils et classements peuvent maintenant utiliser les résultats enregistrés sur cet appareil.</p>
+    </div>
+  </div>
+
+  <div class="result-grid">
+    <div class="panel">
+      <h3>Nouvelle partie</h3>
+      <form id="resultForm">
+        <label>Division
+          <select id="divisionSelect">
+            <option value="Roi">Groupe Roi</option>
+            <option value="Pion">Groupe Pion</option>
+          </select>
+        </label>
+        <label>Joueur Blanc
+          <select id="whitePlayer"></select>
+        </label>
+        <label>Joueur Noir
+          <select id="blackPlayer"></select>
+        </label>
+        <label>Résultat
+          <select id="gameResult">
+            <option value="1-0">1–0 — victoire des Blancs</option>
+            <option value="0-1">0–1 — victoire des Noirs</option>
+            <option value="1/2-1/2">½–½ — nulle</option>
+          </select>
+        </label>
+        <label>Round
+          <input id="roundNumber" type="number" min="1" max="9" value="1">
+        </label>
+        <label>Code de validation
+          <input id="validationCode" type="password" placeholder="Entrer le code" autocomplete="off" required>
+        </label>
+        <p class="muted" style="margin:-4px 0 4px">Le code est nécessaire pour finaliser l’enregistrement d’une partie.</p>
+        <button class="btn primary" type="submit">🔐 Finaliser l’enregistrement</button>
+        <button class="btn" type="button" id="resetResults">Réinitialiser les résultats</button>
+      </form>
+      <p id="resultMessage" class="muted"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Derniers résultats</h3>
+      <div id="resultsList" class="results-list"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const players = {
+    Roi: ["Sylvain Bryhann","Pierre Hatley","Millery Fabrice","Nazaire Kerry Fabian","Revil Ryan","Turenne Wade","Dolne Marckley Paolo","Dume Anel","Avril Garvens","Noël Kévin Rod Andy"],
+    Pion: ["Hans Ryan Estira","Menard Rodensley","Samon Arthur","Clervil Olivier","Guirand Mike Aderson","Émile Jr Bernado","Moncy Hubert Marvin","Lenny Jean Rolf","Noël Jeune Remy Noah","Jeff","Victor Fayden","Séjour Jethro Widmysan","Sinous Gordon Himckley","Nelson Davindry","Montesuma","Dubic Jean Braudry Baudelaire","Lundy Christian","Paul Werley","Prince Coutin","Sinsmis Mc Donald","Emmanuel Carlens"]
+  };
+
+  const key = "ficChessResults2026_2027";
+  let results = JSON.parse(localStorage.getItem(key) || "[]");
+
+  const division = document.getElementById("divisionSelect");
+  const white = document.getElementById("whitePlayer");
+  const black = document.getElementById("blackPlayer");
+  const round = document.getElementById("roundNumber");
+  const form = document.getElementById("resultForm");
+  const list = document.getElementById("resultsList");
+  const msg = document.getElementById("resultMessage");
+  const validationCode = document.getElementById("validationCode");
+  const ADMIN_CODE = "FIC2026";
+
+  function fillPlayers() {
+    const div = division.value;
+    white.innerHTML = players[div].map(p => `<option>${p}</option>`).join("");
+    black.innerHTML = players[div].map(p => `<option>${p}</option>`).join("");
+    if (players[div].length > 1) black.selectedIndex = 1;
+    round.max = div === "Roi" ? 9 : 7;
+  }
+
+  function save() {
+    localStorage.setItem(key, JSON.stringify(results));
+  }
+
+  function points(result, side) {
+    if (result === "1/2-1/2") return 1;
+    if (result === "1-0") return side === "W" ? 3 : 0;
+    return side === "B" ? 3 : 0;
+  }
+
+  function stats(div) {
+    const table = {};
+    players[div].forEach(name => table[name] = {
+      name, gp: 0, w: 0, d: 0, l: 0, pts: 0
+    });
+
+    results.filter(r => r.division === div).forEach(r => {
+      if (!table[r.white] || !table[r.black]) return;
+      table[r.white].gp++; table[r.black].gp++;
+      table[r.white].pts += points(r.result, "W");
+      table[r.black].pts += points(r.result, "B");
+
+      if (r.result === "1-0") { table[r.white].w++; table[r.black].l++; }
+      else if (r.result === "0-1") { table[r.black].w++; table[r.white].l++; }
+      else { table[r.white].d++; table[r.black].d++; }
+    });
+
+    return Object.values(table);
+  }
+
+  function renderResults() {
+    if (!results.length) {
+      list.innerHTML = `<p class="muted">Aucun résultat enregistré pour le moment.</p>`;
+      return;
+    }
+    list.innerHTML = results.slice().reverse().map((r, i) => `
+      <div class="result-row">
+        <span class="badge">${r.division}</span>
+        <strong>R${r.round}</strong>
+        <span>${r.white}</span>
+        <b>${r.result.replace("1/2-1/2","½–½").replace("1-0","1–0").replace("0-1","0–1")}</b>
+        <span>${r.black}</span>
+        <button type="button" class="delete-result" data-index="${results.length-1-i}" aria-label="Supprimer">×</button>
+      </div>
+    `).join("");
+  }
+
+  // Expose live standings for the rest of the site.
+  window.ficChessStats = stats;
+  window.ficChessResults = () => results;
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    if (validationCode.value !== ADMIN_CODE) {
+      msg.textContent = "❌ Code incorrect. La partie n’a pas été enregistrée.";
+      validationCode.focus();
+      return;
+    }
+    if (white.value === black.value) {
+      msg.textContent = "Un joueur ne peut pas jouer contre lui-même.";
+      return;
+    }
+    const r = {
+      division: division.value,
+      white: white.value,
+      black: black.value,
+      result: document.getElementById("gameResult").value,
+      round: Number(round.value),
+      date: new Date().toISOString()
+    };
+    results.push(r);
+    save();
+    renderResults();
+    validationCode.value = "";
+    msg.textContent = "✅ Résultat enregistré. Les statistiques sont maintenant recalculées.";
+    document.dispatchEvent(new CustomEvent("ficChessUpdated"));
+  });
+
+  list.addEventListener("click", e => {
+    const btn = e.target.closest(".delete-result");
+    if (!btn) return;
+    results.splice(Number(btn.dataset.index), 1);
+    save();
+    renderResults();
+    document.dispatchEvent(new CustomEvent("ficChessUpdated"));
+  });
+
+  document.getElementById("resetResults").addEventListener("click", () => {
+    if (!confirm("Supprimer tous les résultats enregistrés sur cet appareil ?")) return;
+    results = [];
+    save();
+    renderResults();
+    document.dispatchEvent(new CustomEvent("ficChessUpdated"));
+  });
+
+  division.addEventListener("change", fillPlayers);
+  fillPlayers();
+  renderResults();
+})();
+</script>
+
+
+<script>
+(() => {
+  const STORAGE = "ficChessResults2026_2027";
+  const divisions = {
+    Roi: ["Sylvain Bryhann","Pierre Hatley","Millery Fabrice","Nazaire Kerry Fabian","Revil Ryan","Turenne Wade","Dolne Marckley Paolo","Dume Anel","Avril Garvens","Noël Kévin Rod Andy"],
+    Pion: ["Hans Ryan Estira","Menard Rodensley","Samon Arthur","Clervil Olivier","Guirand Mike Aderson","Émile Jr Bernado","Moncy Hubert Marvin","Lenny Jean Rolf","Noël Jeune Remy Noah","Jeff","Victor Fayden","Séjour Jethro Widmysan","Sinous Gordon Himckley","Nelson Davindry","Montesuma","Dubic Jean Braudry Baudelaire","Lundy Christian","Paul Werley","Prince Coutin","Sinsmis Mc Donald","Emmanuel Carlens"]
+  };
+
+  function getResults() {
+    try { return JSON.parse(localStorage.getItem(STORAGE) || "[]"); }
+    catch(e) { return []; }
+  }
+
+  function calc(name, division, results) {
+    const s = {games:0,wins:0,draws:0,losses:0,points:0};
+    results.filter(r => r.division === division).forEach(r => {
+      if (r.white !== name && r.black !== name) return;
+      s.games++;
+      if (r.result === "1/2-1/2") {
+        s.draws++; s.points += 1;
+      } else if ((r.result === "1-0" && r.white === name) ||
+                 (r.result === "0-1" && r.black === name)) {
+        s.wins++; s.points += 3;
+      } else {
+        s.losses++;
+      }
+    });
+    return s;
+  }
+
+  function rankings(division, results) {
+    return divisions[division].map(name => ({name, ...calc(name, division, results)}));
+  }
+
+  function updateTextStats() {
+    const results = getResults();
+
+    // Player cards: update elements whose text currently contains placeholder stats.
+    document.querySelectorAll("[data-player-name]").forEach(card => {
+      const name = card.dataset.playerName;
+      const division = card.dataset.division || (divisions.Roi.includes(name) ? "Roi" : "Pion");
+      const s = calc(name, division, results);
+      card.querySelectorAll("[data-stat]").forEach(el => {
+        const k = el.dataset.stat;
+        if (k === "games") el.textContent = s.games;
+        if (k === "wins") el.textContent = s.wins;
+        if (k === "draws") el.textContent = s.draws;
+        if (k === "losses") el.textContent = s.losses;
+        if (k === "points") el.textContent = s.points;
+      });
+    });
+
+    // Update common ranking tables, if present.
+    document.querySelectorAll("table").forEach(table => {
+      const headers = [...table.querySelectorAll("thead th")].map(x => x.textContent.trim().toLowerCase());
+      const pointsCol = headers.findIndex(x => /points|pts/.test(x));
+      const gamesCol = headers.findIndex(x => /match|parties|games|jou/.test(x));
+      const winsCol = headers.findIndex(x => /vic|win/.test(x));
+      const drawsCol = headers.findIndex(x => /nul|draw/.test(x));
+      const lossesCol = headers.findIndex(x => /déf|def|loss/.test(x));
+      if (pointsCol < 0 && gamesCol < 0 && winsCol < 0) return;
+
+      [...table.querySelectorAll("tbody tr")].forEach(row => {
+        const cells = [...row.children];
+        const nameCell = cells.find(c => {
+          const t = c.textContent.trim();
+          return divisions.Roi.includes(t) || divisions.Pion.includes(t);
+        });
+        if (!nameCell) return;
+        const name = nameCell.textContent.trim();
+        const division = divisions.Roi.includes(name) ? "Roi" : "Pion";
+        const s = calc(name, division, results);
+        if (gamesCol >= 0 && cells[gamesCol]) cells[gamesCol].textContent = s.games;
+        if (winsCol >= 0 && cells[winsCol]) cells[winsCol].textContent = s.wins;
+        if (drawsCol >= 0 && cells[drawsCol]) cells[drawsCol].textContent = s.draws;
+        if (lossesCol >= 0 && cells[lossesCol]) cells[lossesCol].textContent = s.losses;
+        if (pointsCol >= 0 && cells[pointsCol]) cells[pointsCol].textContent = s.points;
+      });
+    });
+  }
+
+  window.ficChessLive = { rankings, calc, getResults };
+  updateTextStats();
+  document.addEventListener("ficChessUpdated", updateTextStats);
+  window.addEventListener("storage", e => { if (e.key === STORAGE) updateTextStats(); });
+})();
+</script>
+
+
+<script>
+(() => {
+  const STORAGE = "ficChessResults2026_2027";
+  const players = {
+    Roi: ["Sylvain Bryhann","Pierre Hatley","Millery Fabrice","Nazaire Kerry Fabian","Revil Ryan","Turenne Wade","Dolne Marckley Paolo","Dume Anel","Avril Garvens","Noël Kévin Rod Andy"],
+    Pion: ["Hans Ryan Estira","Menard Rodensley","Samon Arthur","Clervil Olivier","Guirand Mike Aderson","Émile Jr Bernado","Moncy Hubert Marvin","Lenny Jean Rolf","Noël Jeune Remy Noah","Jeff","Victor Fayden","Séjour Jethro Widmysan","Sinous Gordon Himckley","Nelson Davindry","Montesuma","Dubic Jean Braudry Baudelaire","Lundy Christian","Paul Werley","Prince Coutin","Sinsmis Mc Donald","Emmanuel Carlens"]
+  };
+  let division = "Roi";
+
+  const getResults = () => {
+    try { return JSON.parse(localStorage.getItem(STORAGE) || "[]"); } catch(e) { return []; }
+  };
+  const stats = (name, div, rs) => {
+    const s={games:0,wins:0,draws:0,losses:0,points:0};
+    rs.filter(r=>r.division===div && (r.white===name||r.black===name)).forEach(r=>{
+      s.games++;
+      if(r.result==="1/2-1/2"){s.draws++;s.points+=1}
+      else if((r.result==="1-0"&&r.white===name)||(r.result==="0-1"&&r.black===name)){s.wins++;s.points+=3}
+      else s.losses++;
+    });
+    return s;
+  };
+  const ranking = (div,rs) => players[div].map(n=>({name:n,...stats(n,div,rs)}));
+
+  function render(){
+    const rs=getResults(), rank=ranking(division,rs);
+    document.getElementById("livePlayers").textContent=players[division].length;
+    document.getElementById("liveGames").textContent=rs.filter(r=>r.division===division).length;
+    const rounds=[...new Set(rs.filter(r=>r.division===division).map(r=>r.round))];
+    document.getElementById("liveRounds").textContent=rounds.length;
+    document.getElementById("liveLeader").textContent=rank[0]?.points ? rank[0].name : "—";
+
+    document.getElementById("liveStandings").innerHTML=rank.map((p,i)=>`
+      <tr data-name="${p.name.replace(/"/g,'&quot;')}" style="cursor:pointer">
+        <td>${i+1}</td><td>${p.name}</td><td><strong>${p.points}</strong></td>
+        <td>${p.games}</td><td>${p.wins}</td><td>${p.draws}</td><td>${p.losses}</td>
+      </tr>`).join("");
+
+    const games=rs.filter(r=>r.division===division).slice().reverse();
+    document.getElementById("liveMatches").innerHTML=games.length ? games.map(r=>`
+      <div class="match-item"><span>R${r.round}</span><span>${r.white}</span><strong>${r.result.replace("1/2-1/2","½–½").replace("1-0","1–0").replace("0-1","0–1")}</strong><span>${r.black}</span></div>`).join("")
+      : '<p class="muted">Aucune partie enregistrée.</p>';
+  }
+
+  document.querySelectorAll("#divisionTabs button").forEach(b=>b.addEventListener("click",()=>{
+    document.querySelectorAll("#divisionTabs button").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active"); division=b.dataset.division; render();
+  }));
+
+  document.getElementById("liveStandings").addEventListener("click",e=>{
+    const tr=e.target.closest("tr"); if(!tr)return;
+    const name=tr.dataset.name, rs=getResults(), s=stats(name,division,rs);
+    const detail=document.getElementById("playerDetail");
+    detail.classList.add("open");
+    document.getElementById("detailName").textContent=name;
+    document.getElementById("detailStats").textContent=`${s.games} partie(s) · ${s.wins} victoire(s) · ${s.draws} nulle(s) · ${s.losses} défaite(s) · ${s.points} point(s)`;
+    const ms=rs.filter(r=>r.division===division&&(r.white===name||r.black===name)).slice().reverse();
+    document.getElementById("detailMatches").innerHTML=ms.length?ms.map(r=>`
+      <div class="match-item"><span>R${r.round}</span><span>${r.white}</span><strong>${r.result.replace("1/2-1/2","½–½").replace("1-0","1–0").replace("0-1","0–1")}</strong><span>${r.black}</span></div>`).join(""):'<p class="muted">Aucun match.</p>';
+    detail.scrollIntoView({behavior:"smooth",block:"nearest"});
+  });
+
+  document.addEventListener("ficChessUpdated",render);
+  window.addEventListener("storage",e=>{if(e.key===STORAGE)render()});
+  render();
+})();
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  const close=document.getElementById("closePlayerDetail");
+  const detail=document.getElementById("playerDetail");
+  if(close && detail){
+    close.addEventListener("click",function(){
+      detail.classList.remove("open");
+    });
+  }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  const storage="ficChessResults2026_2027";
+  const groups={
+    Roi: ["Sylvain Bryhann","Pierre Hatley","Millery Fabrice","Nazaire Kerry Fabian","Revil Ryan","Turenne Wade","Dolne Marckley Paolo","Dume Anel","Avril Garvens","Noël Kévin Rod Andy"],
+    Pion: ["Hans Ryan Estira","Menard Rodensley","Samon Arthur","Clervil Olivier","Guirand Mike Aderson","Émile Jr Bernado","Moncy Hubert Marvin","Lenny Jean Rolf","Noël Jeune Remy Noah","Jeff","Victor Fayden","Séjour Jethro Widmysan","Sinous Gordon Himckley","Nelson Davindry","Montesuma","Dubic Jean Braudry Baudelaire","Lundy Christian","Paul Werley","Prince Coutin","Sinsmis Mc Donald","Emmanuel Carlens"]
+  };
+  function results(){try{return JSON.parse(localStorage.getItem(storage)||"[]")}catch(e){return[]}}
+  function stat(name,group,rs){
+    let s={games:0,wins:0,draws:0,losses:0,points:0};
+    rs.filter(r=>r.division===group&&(r.white===name||r.black===name)).forEach(r=>{
+      s.games++;
+      if(r.result==="1/2-1/2"){s.draws++;s.points++}
+      else if((r.result==="1-0"&&r.white===name)||(r.result==="0-1"&&r.black===name)){s.wins++;s.points+=3}
+      else s.losses++;
+    });
+    return s;
+  }
+  function renderRoiDor(){
+    const rs=results(), all=[];
+    Object.entries(groups).forEach(([group,names])=>names.forEach(name=>all.push({name,group,...stat(name,group,rs)})));
+        const body=document.getElementById("roiDorStandings");
+    if(body) body.innerHTML=all.map((p,i)=>`<tr><td>${i+1}</td><td><strong>${p.name}</strong></td><td>${p.group}</td><td>${p.points}</td><td>${p.games}</td><td>${p.wins}</td><td>${p.draws}</td><td>${p.losses}</td></tr>`).join("");
+  }
+  renderRoiDor();
+  document.addEventListener("ficChessUpdated",renderRoiDor);
+  window.addEventListener("storage",e=>{if(e.key===storage)renderRoiDor()});
+});
+</script>
+
+</body></html>
